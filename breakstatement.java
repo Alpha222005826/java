@@ -9,7 +9,8 @@ for(int i=100;i<=150;i++)// for loop statement show i will increment from 100 to
  if(i==120&&j==30)//if statement
  {
         System.out.println(i+" "+j);//output message    
-}//end if statement  
+break;
+ }//end if statement  
  
 } }//end for stament  
 }  
