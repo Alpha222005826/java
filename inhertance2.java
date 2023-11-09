@@ -1,47 +1,49 @@
-// Define an interface for account creation
+// Defining an interface for accountcreation
 interface AccountCreation {
     void createAccount();
 }
 
-// Implement the account creation interface in the Signup class
+// Implement the accountcreation interface in the class Signup 
 class Signup implements AccountCreation {
     public void createAccount() {
-        System.out.println("Account created in Signup class");
+        System.out.println("Please fill the form to create your account");
     }
 }
 
-// Create a class Username that extends Signup
+// Creating a class Username that extends Signup
 class Username extends Signup {
     private String username;
 
-    public void setUsername(String username) {
-        this.username = username;
-        System.out.println("Username set to: " + this.username);
+    public void setUsername(String username) {// main method
+
+        System.out.println("Enter your Username: " +username);
     }
 
     public String getUsername() {
-        return username;
+        return username;// program will return username used
     }
 }
 
-// Create a class CreatePassword that extends Username
+// Creating a class CreatePassword that extends Username
 class CreatePassword extends Username {
     private String password;
 
-    public void setPassword(String password) {
-        this.password = password;
-        System.out.println("Password set to: " + this.password);
+    public void setPassword(String password) {// main method
+    this.password=password; 
+        System.out.println("Enter your Password:" + this.password);
+         System.out.println("Account created successfully");
     }
 
     public String getPassword() {
-        return password;
+       
+        return password;// program will return password used
     }
 }
 
 // Create a class Login that extends CreatePassword
 class Login extends CreatePassword {
-    public void performLogin(String enteredPassword) {
-        if (enteredPassword.equals(getPassword())) {
+    public void performLogin(int enteredPassword) { // main method
+        if (enteredPassword==12345) {
             System.out.println("Logged in successfully in Login class");
         } else {
             System.out.println("Incorrect password. Please try again.");
@@ -56,11 +58,10 @@ public class inhertance2 {
 
         // Call methods to create an account, set username and password
         login.createAccount();
-        login.setUsername("myUsername");
-        login.setPassword("myPassword");
+        login.setUsername("MR David KABAMBA");
+        login.setPassword("1234");
 
-        // Attempt to log in with a password
-        login.performLogin("wrongPassword");
-        login.performLogin("myPassword");
+    
     }
 }
+
