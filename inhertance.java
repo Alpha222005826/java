@@ -1,9 +1,9 @@
- // Define the Pages interface
+ // Defining the Pages interface
 interface Pages {
     void displayPageInfo();
 }
 
-// Define the Library class that implements Pages
+// Defining the Library class that implements Pages
 class Library implements Pages {
     String libraryName;
 
@@ -16,7 +16,7 @@ class Library implements Pages {
     }
 }
 
-// Define the Books class that extends Library
+// Defining the Books class that extends Library
 class Books extends Library {
     String bookTitle;
 
@@ -67,7 +67,6 @@ class PagesExtended extends Author {
         this.pageCount = pageCount;
     }
 
-    @Override
     public void displayPageInfo() {
         System.out.println("This book has " + pageCount + " pages.");
     }
